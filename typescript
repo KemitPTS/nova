@@ -1,16 +1,6 @@
-// Структура сообщения
-interface Message {
-  id: string; // UUID
-  channel_id: string;
-  user_id: string;
-  content: string;
-  created_at: string;
-  is_ghost: boolean; // Исчезающие сообщения
-  reactions: Reaction[];
-  thread_id?: string;
-  metadata: {
-    translated: boolean;
-    priority: 'normal' | 'high';
-    typing_indicator: boolean;
-  };
-}
+import { createClient } from '@supabase/supabase-js'
+
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+
+export const supabase = createClient(supabaseUrl, supabaseAnonKey)

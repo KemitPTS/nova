@@ -1,0 +1,16 @@
+// Структура сообщения
+interface Message {
+  id: string; // UUID
+  channel_id: string;
+  user_id: string;
+  content: string;
+  created_at: string;
+  is_ghost: boolean; // Исчезающие сообщения
+  reactions: Reaction[];
+  thread_id?: string;
+  metadata: {
+    translated: boolean;
+    priority: 'normal' | 'high';
+    typing_indicator: boolean;
+  };
+}

@@ -1,0 +1,7 @@
+Frontend: Next.js 14 (App Router)
+Стили: Tailwind CSS + Framer Motion
+База данных: Supabase (Auth, PostgreSQL, Realtime)
+ИИ: OpenAI GPT-4 / Anthropic Claude API
+Иконки: Lucide React
+Видео: WebRTC + Simple-Peer
+Аудио: Web Audio API

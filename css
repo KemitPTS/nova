@@ -1,0 +1,14 @@
+.liquid-glass {
+  backdrop-filter: blur(55px);
+  border-image: linear-gradient(45deg, #00f7ff, #ff00cc) 1;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.mercury-motion {
+  /* Framer Motion конфигурация */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,30 @@
+{
+  "name": "novaai",
+  "version": "1.0.0",
+  "description": "NovaAI - Advanced AI Chatbot with Glassmorphism Design",
+  "private": true,
+  "workspaces": [
+    "packages/web",
+    "packages/backend",
+    "packages/shared"
+  ],
+  "scripts": {
+    "install-all": "yarn install",
+    "dev": "yarn workspace @novaai/web dev & yarn workspace @novaai/backend dev",
+    "build": "yarn workspace @novaai/shared build && yarn workspace @novaai/backend build && yarn workspace @novaai/web build",
+    "start": "yarn workspace @novaai/backend start",
+    "test": "yarn workspaces run test",
+    "lint": "yarn workspaces run lint",
+    "format": "prettier --write .",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3",
+    "prettier": "^3.1.0",
+    "eslint": "^8.54.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0"
+  },
+  "packageManager": "yarn@4.0.0"
+}
